@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>07eea1c7-766b-4140-9f78-97737ba66508</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200420080040_SeedEmployeeTable.cs" />
+    <Compile Remove="Migrations\20200420080040_SeedEmployeeTable.Designer.cs" />
+    <Compile Remove="Migrations\20200420090614_SeedEmployeTeable.cs" />
+    <Compile Remove="Migrations\20200420090614_SeedEmployeTeable.Designer.cs" />
+    <Compile Remove="Migrations\20200420091403_SeedEmployeTeable.cs" />
+    <Compile Remove="Migrations\20200420091403_SeedEmployeTeable.Designer.cs" />
+    <Compile Remove="Migrations\20200420091752_AlterEmployeeSeedData.cs" />
+    <Compile Remove="Migrations\20200420091752_AlterEmployeeSeedData.Designer.cs" />
+    <Compile Remove="Migrations\20200420093536_AlterEmployeeSeedData1.cs" />
+    <Compile Remove="Migrations\20200420093536_AlterEmployeeSeedData1.Designer.cs" />
+    <Compile Remove="Migrations\20200420100232_PhotoPath.cs" />
+    <Compile Remove="Migrations\20200420100232_PhotoPath.Designer.cs" />
+    <Compile Remove="Migrations\20200420110928_EmployeePhoto.cs" />
+    <Compile Remove="Migrations\20200420110928_EmployeePhoto.Designer.cs" />
+    <Compile Remove="Migrations\20200420111301_NewEmployeePhoto.cs" />
+    <Compile Remove="Migrations\20200420111301_NewEmployeePhoto.Designer.cs" />
+    <Compile Remove="Migrations\20200420111407_sampe.cs" />
+    <Compile Remove="Migrations\20200420111407_sampe.Designer.cs" />
+    <Compile Remove="Migrations\20200420111455_sampe.cs" />
+    <Compile Remove="Migrations\20200420111455_sampe.Designer.cs" />
+    <Compile Remove="Migrations\20200420111916_PicPath.cs" />
+    <Compile Remove="Migrations\20200420111916_PicPath.Designer.cs" />
+    <Compile Remove="Migrations\20200420113506_EmployeePic.cs" />
+    <Compile Remove="Migrations\20200420113506_EmployeePic.Designer.cs" />
+    <Compile Remove="Migrations\20200420124738_EmployeePic1.cs" />
+    <Compile Remove="Migrations\20200420124738_EmployeePic1.Designer.cs" />
+    <Compile Remove="Migrations\20200429064028_ExtendingIdentityUser.cs" />
+    <Compile Remove="Migrations\20200429064028_ExtendingIdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

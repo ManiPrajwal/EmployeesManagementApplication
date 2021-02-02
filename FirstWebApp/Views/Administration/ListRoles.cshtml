@@ -1,0 +1,55 @@
+﻿@model IEnumerable<IdentityRole>
+
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService authourizationService
+
+@{
+    ViewBag.Title = "All Roles";
+}
+
+<h1>All Roles</h1>
+@if (Model.Any())
+{
+    <a class="btn btn-primary" style="width:auto" asp-action="CreateRole" asp-controller="administration">
+        Add new Role
+    </a>
+    foreach (var role in Model)
+    {
+        <div class="card">
+            <div class="card-header">
+                Role Id: @role.Id
+            </div>
+            <div class="card-body">
+                <h5>@role.Name</h5>
+            </div>
+            <div class="card-footer">
+
+                @if ((await authourizationService.AuthorizeAsync(User, "EditRolePolicy")).Succeeded)
+                {
+                    <a class="btn btn-primary" style="width:auto"
+                       asp-action="EditRole" asp-controller="administration" asp-route-id="@role.Id">
+                        Edit
+                    </a>
+                }
+
+                <a class="btn btn-danger" style="width:auto">Delete</a>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="card">
+        <div class="card-header">
+            No Roles created yet.
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                Use the button below to create a Role
+            </h5>
+            <a class="btn btn-primary" style="width:auto" asp-action="CreateRole" asp-controller="administration">
+                Create Role
+            </a>
+        </div>
+    </div>
+}
